@@ -60,8 +60,11 @@ def checkIfGameOver():
 
 def checkForWinner():
     # Check rows
+    row_Winner = checkRows()
     # Check Columns
+    column_Winner = checkColumn()
     # Check Diagonal
+    diagonal_Winner = checkDiagonal()
     return
 
 def checkRows():
