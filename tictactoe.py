@@ -28,15 +28,24 @@ def display_board():
 def playGame() :
     # Display the initial Board 
     display_board() 
+
+    # While the game is still going
     while game_still_going :
+
+        #handle a single turn player of an arbitary player
         handleTurn(currentPlayer)
+
+        # check if the game has ended
         checkIfGameOver()
+
+        # Flip to the other player
         flipPlayer()
     if Winner == "X" or Winner == "O" :
         print(Winner + "Won")
     elif Winner == None :
         print("Tie !")
 
+# Handle a Single turn of an arbitary player
 def handleTurn(player):
     position = input("Chose a Position from 1 to 9 : ")
     position = int(position) - 1 
