@@ -55,13 +55,22 @@ def handleTurn(player):
     display_board()
 
 def checkIfGameOver():
-    checkIfWin()
+    checkForWinner()
     checkIfDraw()
 
-def checkIfWin():
+def checkForWinner():
     # Check rows
     # Check Columns
     # Check Diagonal
+    return
+
+def checkRows():
+    return
+
+def checkColumn():
+    return
+
+def checkDiagonal():
     return
 
 def checkIfDraw():
