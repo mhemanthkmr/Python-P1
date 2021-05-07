@@ -59,15 +59,32 @@ def checkIfGameOver():
     checkIfDraw()
 
 def checkForWinner():
+    #set a global variable
+    global Winner 
     # Check rows
     row_Winner = checkRows()
     # Check Columns
     column_Winner = checkColumn()
     # Check Diagonal
     diagonal_Winner = checkDiagonal()
+
+    if row_Winner :
+        Winner = row_Winner()
+    elif column_Winner :
+        Winner = column_Winner()
+    elif diagonal_Winner :
+        Winner = diagonal_Winner()
+    else 
+        Winner = None
+
     return
 
 def checkRows():
+    #set up global variable
+    global game_still_going
+    row_1 = board[0] == board[1] == board[2] != "-"
+    row_2 = board[3] == board[4] == board[5] != "-"
+    row_2 = board[6] == board[7] == board[8] != "-"    
     return
 
 def checkColumn():
